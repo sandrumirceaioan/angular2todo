@@ -1,0 +1,14 @@
+.header-container {
+    background: #ffffff;
+    border-bottom: 1px solid #585858;
+}
+
+.logo img {
+    float:left;
+}
+
+.info {
+    padding: 20px 20px;
+    box-sizing: border-box;
+    color: #585858;
+}

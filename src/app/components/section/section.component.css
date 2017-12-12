@@ -1,0 +1,9 @@
+.main-topic {
+    background: #363636;
+    color: #c1c1c1;
+}
+
+.section-container {
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
