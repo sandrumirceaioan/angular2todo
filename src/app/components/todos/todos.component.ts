@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ToDoModel } from './todos.model';
-import { TODOS } from './todos.service';
+import { TodoService } from './todos.service';
 
 @Component({
     selector: 'todos',
@@ -10,8 +10,11 @@ import { TODOS } from './todos.service';
 
 export class ToDoListComponent {
     todos: ToDoModel[];
+    constructor(private todoService: TodoService){ }
+
     ngOnInit(){
-        this.todos = TODOS;
+        let todoService = new TodoService();
+        this.todos = this.todoService.getTodos();
     }
 
     setDone(todo){

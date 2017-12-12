@@ -1,8 +1,11 @@
-/* browser module and main app module */
+/* app browser module and main app module */
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AlertModule } from 'ngx-bootstrap'
 import { NgModule } from '@angular/core';
+
+/* app services  */
+import { TodoService } from '../app/components/todos/todos.service';
 
 /* app components */
 import { ContainerComponent } from '../app/layout/container/container.component';
@@ -30,7 +33,7 @@ import { ToDoListComponent } from '../app/components/todos/todos.component';
     FormsModule,
     AlertModule.forRoot()
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [ContainerComponent]
 })
 export class AppModule { }
