@@ -1,0 +1,33 @@
+.todo-container {
+    margin: 10px 0px;
+    padding: 10px 10px;
+    background: #ffffff;
+}
+
+.todo-title, .todo-footer {
+    background: #585858;
+    padding: 5px;
+    color: #ffffff;
+}
+
+.todo-footer {
+    background: #ffffff;
+    padding: 5px;
+    color: #000000;
+}
+
+.urgent {
+    background: #ff3c00;
+}
+
+.solved {
+    background: #00c01a;
+}
+
+.todo-footer label {
+    font-weight: normal;
+}
+
+.todo-footer input {
+    max-width: 20%;
+}
