@@ -1,7 +1,8 @@
 /* app browser module and main app module */
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { AlertModule } from 'ngx-bootstrap'
+import { AlertModule } from 'ngx-bootstrap';
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 
 /* app services  */
@@ -31,7 +32,8 @@ import { ToDoListComponent } from '../app/components/todos/todos.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    HttpModule
   ],
   providers: [TodoService],
   bootstrap: [ContainerComponent]
