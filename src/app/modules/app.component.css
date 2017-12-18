@@ -1,0 +1,26 @@
+.app-container {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #3e4e66;
+}
+
+.app-row {
+    position: relative;
+    background: #ffffff;
+}
+
+.btn-add {
+    position: absolute;
+    border-radius: 50px;
+    top: -15px;
+    right: -15px;
+    background: #e46b00;
+    color: #ffffff;
+    z-index: 9999;
+}
+
+.btn-add:focus, .btn-add:active {
+    outline: none;
+}

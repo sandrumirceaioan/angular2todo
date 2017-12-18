@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
-// connect to mongolab db
+// connect to mongoDB @ mlab
 mongoose.connect('mongodb://pretenash:rappac33!@ds139436.mlab.com:39436/tododb', {
   useMongoClient: true
 });
