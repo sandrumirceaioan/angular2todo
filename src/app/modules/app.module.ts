@@ -1,17 +1,23 @@
 /* app browser module and main app module */
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap';
-import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 
-/* app services  */
-import { TodoService } from '../../app/services/todoService/todo.service';
-
-/* app components */
+/* main component */
 import { AppComponent } from '../../app/modules/app.component';
 
+/* routing module */
+import { AppRoutingModule } from './app-routing.module';
+
+/* app modules */
+import { TodoListModule } from './todoList/todo-list.module';
+import { TodoSideModule } from './todoSide/todo-side.module';
+import { TodoAddModule } from './todoAdd/todo-add.module';
+
+/* app services */
+import { NavService } from '../services/navService/nav.service';
 
 @NgModule({
   declarations: [
@@ -20,11 +26,14 @@ import { AppComponent } from '../../app/modules/app.component';
   imports: [
     AngularFontAwesomeModule,
     BrowserModule,
-    FormsModule,
+    AppRoutingModule,
     AlertModule.forRoot(),
-    HttpModule
+    TodoListModule,
+    TodoSideModule,
+    TodoAddModule
   ],
-  providers: [TodoService],
+  exports: [],
+  providers: [ NavService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
