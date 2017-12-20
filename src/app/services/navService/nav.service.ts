@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class NavService {
-    link: String;
-    icon: String;
-    constructor(){ }
+    path: any;
+    constructor(private route: Router){
+    }
 
-    setLink(link): void {
-        this.link = link;
-        this.icon = link == '/list' ? 'fa fa-chevron-left' : 'fa fa-plus';
+    getPath(){
+        this.path = this.route.url;
+        console.log(this.path);
     }
 }

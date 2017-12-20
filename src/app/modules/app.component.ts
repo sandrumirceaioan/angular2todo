@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavService } from '../services/navService/nav.service';
 
 @Component({
     selector: 'todo-app',
@@ -7,9 +6,9 @@ import { NavService } from '../services/navService/nav.service';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-    constructor(private navService: NavService){ }
+    path: any;
+      constructor() { }
 
-    ngOnInit() {}
-
-
+    ngOnInit() {
+    }
 }

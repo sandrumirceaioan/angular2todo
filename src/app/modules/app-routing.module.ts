@@ -5,8 +5,8 @@ import { TodoAddComponent } from './todoAdd/components/todo-add/todo-add.compone
 
 const routes: Routes = [
   { path: '', redirectTo: '/list', pathMatch: 'full' },
-  { path: 'list', component: TodoListComponent, data: {title: 'To-Do List'} },
-  { path: 'add', component: TodoAddComponent, data: {title: 'Add To-Do'} }
+  { path: 'list', component: TodoListComponent, data: {path: 'list'} },
+  { path: 'add', component: TodoAddComponent, data: {path: 'add'} }
 ];
 
 @NgModule({

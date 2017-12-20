@@ -7,11 +7,12 @@ import { NavService } from '../../../../services/navService/nav.service';
   styleUrls: ['./todo-add.component.css']
 })
 export class TodoAddComponent implements OnInit {
+  private path: any;
 
   constructor(private navService: NavService) { }
 
   ngOnInit() {
-    this.navService.setLink("/list");
+    this.navService.getPath();
   }
 
 }
