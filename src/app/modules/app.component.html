@@ -1,7 +1,7 @@
 <div class="container app-container">
     <div class="row app-row">
-        <button type="button" class="btn btn-add" routerLink="/add">
-          <i class="fa fa-plus" aria-hidden="true"></i>
+        <button type="button" class="btn btn-add" [routerLink]="getPath()">
+          <i [class]="icon" aria-hidden="true"></i>
         </button>
         <div class="col-md-6">
             <router-outlet></router-outlet>

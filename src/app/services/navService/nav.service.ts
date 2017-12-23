@@ -8,7 +8,6 @@ export class NavService {
     }
 
     getPath(){
-        this.path = this.route.url;
-        console.log(this.path);
+        return this.route.url == '/list' ? '/add' : '/list';
     }
 }
