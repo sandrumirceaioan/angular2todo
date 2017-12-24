@@ -1,7 +1,3 @@
-<div class="row">
-  <ul>
-    <li *ngFor='let todo of todos'>
-      <todo [oneToDo]="todo"></todo>
-    </li>
-  </ul>
+<div class="row todo-list">
+      <todo *ngFor="let todo of todos" [oneToDo]="todo"></todo>
 </div>
